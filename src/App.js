@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import Hello from "./Hello";
 
 function App() {
     const [value, setValue] = React.useState("OwO");
