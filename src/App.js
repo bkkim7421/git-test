@@ -12,6 +12,7 @@ function App() {
     return (
         <div>
             <h1>God Damn!</h1>
+            <Hello />
             <Button text={value} fontSize={18} onClick={changeValue} />
         </div>
     );
