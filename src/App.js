@@ -1,22 +1,16 @@
-import React from "react";
-import Button from "./Button";
-import Hello from "./Hello";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-    const [value, setValue] = React.useState("OwO");
-
-    const changeValue = () => {
-        setValue("Yeah~");
-    };
-
-    return (
-        <div>
-            <h1>God Damn!</h1>
-            <h2>Thanks Goodness</h2>
-            <Hello />
-            <Button text={value} fontSize={18} onClick={changeValue} />
-        </div>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Detail />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
